@@ -1,9 +1,9 @@
 import React from 'react';
-import AppContainer from '../containers/AppContainer';
+import RESTy from '../containers/RESTy';
 
 export default function App() {
   return <>
-    <AppContainer />
+    <RESTy />
   </>;
 }
   
