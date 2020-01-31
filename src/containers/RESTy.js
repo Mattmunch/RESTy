@@ -9,7 +9,7 @@ export default class RESTy extends Component {
     url:'',
     method: '',
     requestBody:'',
-    response: '',
+    response: [],
     historyItems: []
   }
 
@@ -18,8 +18,7 @@ export default class RESTy extends Component {
       console.log(this.state);
       makeFetch(this.state.url)
         .then(res => {
-          const stringifiedRes = JSON.stringify(res);
-          this.setState({ response: stringifiedRes });
+          this.setState({ response: res });
         });
     }
   handleChange = ({ target }) => {
