@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HistoryItem from './HistoryItem';
+import gridLayout from '../../containers/RESTy.css';
 
 const HistoryList = ({ historyItems }) => {
   const historyElements = historyItems.map((historyItem, i) => (
@@ -9,7 +10,7 @@ const HistoryList = ({ historyItems }) => {
     </li>
   ));
   return (
-    <ul>
+    <ul className={gridLayout.historyList}>
       {historyElements}
     </ul>
   );

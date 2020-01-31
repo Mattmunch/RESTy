@@ -1,8 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-;
+import PropTypes from 'prop-types';
+import gridLayout from '../../containers/RESTy.css';
+
 const Form = ({ onSubmit, onChange }) => (
-  <form onSubmit={onSubmit}>
+  <form onSubmit={onSubmit} className={gridLayout.form}>
     <input onChange={onChange} name="url" type="text" placeholder="URL"/>
     <input onChange={onChange} type="radio" value="GET" name="method"/>GET
     <input onChange={onChange} type="radio" value="POST" name="method"/>POST

@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types'
 ;
 import ReactJson from 'react-json-view';
+import gridLayout from '../../containers/RESTy.css';
+
 
 const ResponseDisplay = ({ response }) => (
   <>
-    <section>
+    <section className={gridLayout.responseDisplay}>
       <ReactJson src={response} />
     </section>
   </>

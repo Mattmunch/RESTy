@@ -1,4 +1,28 @@
 .Container {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "historyList form form form"
+    "historyList responseDisplay responseDisplay responseDisplay"
+    "footer footer footer footer";
+
+    .historyList {
+        grid-area: historyList;
+    }
+    .form {
+        grid-area: form;
+    }
+    .responseDisplay {
+        grid-area: responseDisplay;
+        overflow: scroll;
+    }
+    .header {
+        grid-area: header;
+    }
+    .footer {
+        grid-area: footer;
+    }
     
 }

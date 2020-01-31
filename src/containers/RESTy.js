@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import Form from '../components/form/Form';
 import HistoryList from '../components/history/HistoryList';
 import ResponseDisplay from '../components/responseDisplay/ResponseDisplay';
@@ -32,12 +34,15 @@ export default class RESTy extends Component {
   render() {
     const { url, method, requestBody, response, historyItems } = this.state;
 
-    return (
+    return (<>
+      <Header />
       <main className={styles.Container}>
         <Form onSubmit={this.handleSubmit} onChange={this.handleChange} url={url} method={method} requestBody={requestBody}  />
         <HistoryList historyItems={historyItems} />
         <ResponseDisplay response={response} />
       </main>
+      <Footer />
+    </>
     );
   }
 
